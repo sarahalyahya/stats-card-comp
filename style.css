@@ -16,6 +16,12 @@ body {
   color: white;
   font-size: 1.5rem;
   font-family: "Inter", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
 }
 
 .text--purple {
@@ -26,27 +32,24 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 2rem 2rem;
-  border-radius: 30px;
+  margin: 5rem 2rem;
+  border-radius: 10px;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .card__header {
-  position: relative;
   background: url("img/image-header-mobile.jpg");
   width: 100%;
-  height: 35rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
 }
 
 .card__overlay {
-  position: absolute;
-  background: hsla(277, 64%, 61%, 0.6);
-  top: 0;
-  left: 0;
-  width: 100%;
+  background: hsla(277, 64%, 61%, 0.8);
   height: 100%;
+  mix-blend-mode: multiply;
 }
 
 .card__content {
@@ -59,7 +62,7 @@ body {
   font-weight: 400;
   align-self: center;
   line-height: 3.5rem;
-  padding: 0 2rem;
+  padding: 0 0.75rem;
   margin-bottom: 3rem;
 }
 
@@ -78,6 +81,40 @@ body {
   font-weight: 400;
   font-size: 1.35rem;
   letter-spacing: 0.2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    flex-direction: row;
+    text-align: left;
+    width: 70%;
+    overflow: hidden;
+  }
+
+  .card__content {
+    padding: 3rem 7rem;
+    margin-top: 2rem;
+  }
+
+  .card__content p {
+    padding: 0;
+    margin-bottom: 7rem;
+    margin-top: 3rem;
+  }
+  .card__header {
+    background: url("img/image-header-desktop.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    order: 2;
+  }
+
+  .card_content_stats {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 /* The designs were created to the following widths:
 
